@@ -44,7 +44,7 @@ class MonkeyTypeBot:
     def scrape_words(self):
         """Scrape the words that need to be typed from the active test"""
         try:
-            # Wait for the words to be visible
+            # Keep the tab active so the words remain visible for scraping
             word_elements = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".word"))
             )
@@ -101,7 +101,7 @@ class MonkeyTypeBot:
                 actions.send_keys(char)
                 actions.pause(delay)
                 
-            # Add space after each word
+            # Add space after each word !Very important step.
             actions.send_keys(Keys.SPACE)
             actions.pause(base_delay)
             
@@ -125,14 +125,14 @@ class MonkeyTypeBot:
         # Wait for the test to complete and results to show
         print("Test complete! Check your results.")
         
-    def close(self):
-        """Close the browser when done"""
-        self.driver.quit()
+    # def close(self):
+    #     """Close the browser when done"""
+    #     self.driver.quit()
 
 
 if __name__ == "__main__":
     # Create the bot with a very high WPM (adjust as needed)
-    bot = MonkeyTypeBot(wpm_speed=200)
+    bot = MonkeyTypeBot(wpm_speed=300)
     
     try:
         bot.complete_typing_test()
