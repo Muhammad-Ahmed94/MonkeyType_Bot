@@ -8,4 +8,4 @@ pip install
 ```
 python monkeytype_bot.py
 ```
-**Once it loads the website wait for it to complete any popups and cookie consent. once you select the challenge simply press `enter/return` in the terminal and the let bot complete its job**
+**Once it loads the website wait for it to complete any popups and cookie consent or do it manually. Once you select the challenge/time/mode, simply press `enter/return` in the terminal and let the bot complete its job**
