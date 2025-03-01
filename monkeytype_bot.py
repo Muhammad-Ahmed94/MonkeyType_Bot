@@ -9,6 +9,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
 import random
 
+
 class MonkeyTypeBot:
     def __init__(self, wpm_speed=200):
         """
